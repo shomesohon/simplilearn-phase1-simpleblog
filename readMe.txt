@@ -23,4 +23,4 @@ Detailed blog for user
 I have not attached bootstrap file in the sourche code. I have 'git ignored' the file.
 I have used CDN for JQuery and Fontawesome
 
-Git repository link: 
+Git repository link: https://github.com/shomesohon/simplilearn-phase1-simpleblog
