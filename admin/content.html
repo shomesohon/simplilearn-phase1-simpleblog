@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 75rem;
+            padding-top: 4.5rem;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Movie Media</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="contents.html">Content</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="p-4 p-md-5 mb-4 rounded text-bg-dark" style="background-image: url('https://cdn.wallpapersafari.com/65/71/YejQEb.jpg'); min-height: 300px; background-position: center center;">
+            <div class="col-md-6 px-0">
+              <h1 class="display-4 fst-italic">10 underrated action movies 2022</h1>
+            </div>
+        </div>
+
+        <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Edit this post</h4>
+            <form class="needs-validation" novalidate="">
+              <div class="row g-3">
+                <div class="col-sm-12">
+                  <label for="firstName" class="form-label">Post title</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="10 underrated action movies 2022" required="">
+                  <div class="invalid-feedback">
+                    Post title is required.
+                  </div>
+                </div>
+    
+                <div class="col-sm-12">
+                    <label for="exampleFormControlTextarea1" class="form-label">Post content</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </textarea>
+                  <div class="invalid-feedback">
+                    Post content is required
+                  </div>
+                </div>
+              
+                <div class="col-md-6">
+                  <label for="cc-name" class="form-label">Created by</label>
+                  <input type="text" class="form-control" id="cc-name" value="Sohon Shome" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Created by is required
+                  </div>
+                </div>
+    
+                <div class="col-md-6">
+                  <label for="formFile" class="form-label">Add photo</label>
+                  <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="cc-number" class="form-label">Post tag</label>
+                  <input type="text" class="form-control" id="cc-number" placeholder="" Value="Action movies, Hollywood movies, 2022 movies">
+                  <small>optional</small>
+                </div>
+
+                <div class="col-md-12 mt-3">
+                  <button class="w-100 btn btn-primary btn-lg" type="submit">Update content</button>
+                </div>
+
+              </div>
+            </form>
+        </div>
+
+    </div>
+
+    <footer class="footer fixed-bottom bg-dark">
+        <div class="container p-3 pb-0">
+          <p class="text-white text-center">© Sohon Shome 2022</p>
+        </div>
+    </footer>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

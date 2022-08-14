@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            min-height: 75rem;
+            padding-top: 4.5rem;
+        }
+        .btn-sm{
+            border: none;
+        }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Movie Media</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="#">Content</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="col-md-12 mb-3">
+            <h4>All contents</h4>
+        </div>
+        <table class="table">
+        <thead class="table-primary">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Date</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Marvel AGENTS of Shield discontinued</td>
+            <td>10th Apr 2021</td>
+            <td>
+                <a class="btn btn-sm" href="content.html"><i class="fa-solid fa-pen-to-square text-primary"></i></a>
+                <button class="btn btn-sm" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash text-danger"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>The Walking Dead new season confirmed by director</td>
+            <td>23rd Nov 2021</td>
+            <td>
+                <a class="btn btn-sm" href="content.html"><i class="fa-solid fa-pen-to-square text-primary"></i></a>
+                <button class="btn btn-sm" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash text-danger"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>10 underrated action movies 2022</td>
+            <td>1st Feb 2022</td>
+            <td>
+                <a class="btn btn-sm" href="content.html"><i class="fa-solid fa-pen-to-square text-primary"></i></a>
+                <button class="btn btn-sm" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash text-danger"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Tom Cruise reveal his first look on Mission Impossible</td>
+            <td>12th May 2022</td>
+            <td>
+                <a class="btn btn-sm" href="content.html"><i class="fa-solid fa-pen-to-square text-primary"></i></a>
+                <button class="btn btn-sm" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash text-danger"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Across the Spider-Verse Merch Reveals New Spider-Man Character Details</td>
+            <td>17th Jun 2022</td>
+            <td>
+                <a class="btn btn-sm" href="content.html"><i class="fa-solid fa-pen-to-square text-primary"></i></a>
+                <button class="btn btn-sm" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash text-danger"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>Black Adam Image Reveals New Look at Justice Society of America</td>
+            <td>5th Jul 2022</td>
+            <td>
+                <a class="btn btn-sm" href="content.html"><i class="fa-solid fa-pen-to-square text-primary"></i></a>
+                <button class="btn btn-sm" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash text-danger"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>Chris Hemsworth’s Wife Reveals New Look at Her Thor: Love & Thunder Cameo</td>
+            <td>10th Aug 2022</td>
+            <td>
+                <a class="btn btn-sm" href="content.html"><i class="fa-solid fa-pen-to-square text-primary"></i></a>
+                <button class="btn btn-sm" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash text-danger"></i></button>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <!--Delete dialog box-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Delete content</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4 class="lead"><strong>Are you sure want to delete this ?<br><span style="font-size: 14px;">This process is irevseable, once you proceed you will lose your data</span></strong></h4>
+                <button type="button" class="btn btn-danger mt-3" data-bs-dismiss="modal">Delete</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <footer class="footer fixed-bottom bg-dark">
+        <div class="container p-3 pb-0">
+          <p class="text-white text-center">© Sohon Shome 2022</p>
+        </div>
+    </footer>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

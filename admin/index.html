@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 75rem;
+            padding-top: 4.5rem;
+        }
+        #empty-alert{
+          display: none;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Movie Media</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="contents.html">Content</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Add new post</h4>
+            
+            <!--Post submit success dialog box-->
+            <div class="alert alert-success alert-dismissable" id="empty-alert">
+              You have successfully added a new post.
+              <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-hidden="true"></button>
+            </div>
+
+            <form name="postForm" onsubmit="return validateForm();" id="submitpost">
+              <div class="row g-3">
+                <div class="col-sm-12">
+                  <label for="firstName" class="form-label">Post title</label>
+                  <input type="text" class="form-control" name="title" placeholder="" value="">
+                  <div class="invalid-feedback">
+                    Post title is required.
+                  </div>
+                </div>
+    
+                <div class="col-sm-12">
+                    <label for="content" class="form-label">Post content</label>
+                    <textarea class="form-control" name="content" rows="3"></textarea>
+                    <div class="invalid-feedback">
+                      Post content is required
+                    </div>  
+                </div>
+              
+                <div class="col-md-6">
+                  <label for="cc-name" class="form-label">Created by</label>
+                  <input type="text" class="form-control" name="author" placeholder="">
+                  <div class="invalid-feedback">
+                    Created by is required
+                  </div>
+                </div>
+    
+                <div class="col-md-6">
+                  <label for="formFile" class="form-label">Add photo</label>
+                  <input class="form-control" type="file" name="photo">
+                  <div class="invalid-feedback">
+                    Adding photo is required
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="cc-number" class="form-label">Post tag</label>
+                  <input type="text" class="form-control" name="tag" placeholder="">
+                  <small>optional</small>
+                </div>
+
+                <div class="col-md-12 mt-3">
+                  
+                  <button class="w-100 btn btn-primary btn-lg">Add new content</button>
+                </div>
+
+              </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer fixed-bottom bg-dark">
+      <div class="container p-3 pb-0">
+        <p class="text-white text-center">© Sohon Shome 2022</p>
+      </div>
+    </footer>
+
+    <!--Empty field dialog box-->
+    <div class="modal fade" id="emptyField" tabindex="-1" aria-labelledby="emptyFieldLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-danger">
+          <div class="modal-header" style="border: none;">
+              <h5 class="modal-title text-white" id="staticBackdropLabel">Fields are empty</h5>
+              <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+      </div>
+      </div>
+    </div>
+
+ 
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+      /*As this project only use client end validation so preventing from
+      submission is required to give a success message on final form submit*/
+      $("#submitpost").submit(function(e) {
+          e.preventDefault();
+      });
+
+      //validate form
+      function validateForm() {
+        var a = document.forms["postForm"]["title"].value;
+        var b = document.forms["postForm"]["content"].value;
+        var c = document.forms["postForm"]["author"].value;
+        var d = document.forms["postForm"]["photo"].value;
+        if (a == null || a == "", b == null || b == "", c == null || c == "", d == null || d == "") {
+          //while form fields are empty
+          $('#emptyField').modal('show');
+          return false;
+        }else{
+          //while form fields are !empty
+          $('.alert').show()
+        }
+      }
+
+      
+    </script>
+    
+    
+    
+  </body>
+</html>
